@@ -1,8 +1,8 @@
 <template>
-    <div class="flex flex-col bg-white rounded-2xl overflow-hidden lg:m-2 md:m-2 mb-3">
-            <NuxtLink :to="link" class="overflow-hidden m-0 rounded-5x1">
+    <NuxtLink :to="link" class="flex flex-col bg-white roundedb-2xl overflow-hidden lg:m-2 md:m-2 mb-3">
+            <div class="overflow-hidden m-0 rounded-5x1">
             <img alt="Trusted and secured" class="lg:h-[256px] h-40 w-full object-cover "
-                :src=image /></NuxtLink>
+            :src="'_nuxt'+image"/></div>
 
                 <footer class="px-4 py-6 space-y-3">
             <h2 class="mb-2 text-xl text-gray-700 font-bold leading-tight md:text-xl">
@@ -23,7 +23,7 @@
             </svg>
           </a>
         </div></footer>
-      </div>
+      </NuxtLink>
 </template>
 <script>
     export default {
@@ -40,9 +40,10 @@
                 type:String,
                 default:'sub title',
             },
-            link:{
-                type:String,
-                default:'/',
+        },
+        computed:{
+            link(){
+                return '/plants/1';
             }
         }
     }

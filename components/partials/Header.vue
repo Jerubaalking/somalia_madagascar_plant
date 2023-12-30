@@ -71,7 +71,7 @@
                                     fill="white" />
                             </svg>
                         </div> -->
-                        <button class="flex flex-col items-center">
+                        <!-- <button class="flex flex-col items-center">
                                 <svg class="h-6 w-12 text-gray" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -90,7 +90,7 @@
                                 <span class="font-medium text-white uppercase tracking-wider">
                                   
                                 </span>
-                            </button>
+                            </button> -->
                     </template>
                 </div>
             </div>

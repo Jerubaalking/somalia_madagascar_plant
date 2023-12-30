@@ -24,6 +24,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     {src:'node_modules/autoprefixer'},
+    // { src: "~/plugins/v-i18n.js" },
   ],
   alias: {
     images: '@/assets/img',
@@ -50,6 +51,96 @@ export default {
           },
       },
   },
+},
+i18n: {
+  lazy: true,
+  defaultLocale: "sw",
+  fallbackLocale: "sw",
+  langDir: "locales/",
+  locales: [
+      {
+          code: "en",
+          name: "English",
+          iso: "en-US",
+          file: "en-US.js",
+          dir: "ltr",
+          countryCode: "US",
+      },
+      {
+          code: "sw",
+          name: "Swahili",
+          iso: "sw-TZ",
+          file: "sw-TZ.js",
+          dir: "ltr",
+          countryCode: "TZ",
+      },
+  ],
+  vueI18n: {
+      dateTimeFormats: {
+          en: {
+              short: {
+                  year: "numeric",
+                  month: "short",
+                  day: "2-digit",
+              },
+              long: {
+                  year: "numeric",
+                  month: "long",
+                  day: "2-digit",
+                  hour: "numeric",
+                  minute: "numeric",
+              },
+              month_day: {
+                  day: "2-digit",
+                  month: "long",
+              },
+              year: {
+                  year: "numeric",
+              },
+          },
+          sw: {
+              short: {
+                  year: "numeric",
+                  month: "short",
+                  day: "2-digit",
+              },
+              long: {
+                  year: "numeric",
+                  month: "long",
+                  day: "2-digit",
+                  hour: "numeric",
+                  minute: "numeric",
+              },
+              month_day: {
+                  day: "2-digit",
+                  month: "long",
+              },
+              year: {
+                  year: "numeric",
+              },
+          },
+      },
+      numberFormats: {
+          en: {
+              currency: {
+                  style: "currency",
+                  currency: "TZS",
+                  minimumFractionDigits: 0,
+                  maximumFractionDigits: 0,
+              },
+          },
+          sw: {
+              currency: {
+                  style: "currency",
+                  currency: "TZS",
+                  minimumFractionDigits: 0,
+                  maximumFractionDigits: 0,
+              },
+          },
+      },
+  },
+  strategy: "prefix_and_default",
+  detectBrowserLanguage: false,
 },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -87,7 +178,7 @@ export default {
                       scrollPos:{x:0,y:0},
                   };
                   break;
-                  case "/plants/:slug":
+                  case "/plants/:id":
                     console.log("router meta===>>",route.meta);
                   route.meta = {
                       ...route.meta,
