@@ -5,9 +5,11 @@
             :src="'_nuxt'+image"/></div>
 
                 <footer class="px-4 py-6 space-y-3">
-            <h2 class="mb-2 text-xl text-gray-700 font-bold leading-tight md:text-xl">
-            {{title}}
-            </h2>
+                    <div class="flex flex-between center-items">
+                    <h2 class="mb-2 text-xl text-gray-700 font-bold leading-tight md:text-xl">
+                    {{title}}
+                    </h2>
+                    </div>
             <p class="mb-4 leading-relaxed text-slate-700 dark:text-slate-400">
                 {{ sub_title }}
             </p>
@@ -40,11 +42,10 @@
                 type:String,
                 default:'sub title',
             },
+            link:{
+                type:String,
+                default:'/plants/1',
+            },
         },
-        computed:{
-            link(){
-                return '/plants/1';
-            }
-        }
     }
 </script>

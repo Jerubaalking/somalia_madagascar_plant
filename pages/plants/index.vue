@@ -28,12 +28,12 @@ export default{
   data() {
     return {
       contents:[
-        {image:'/assets/img/system/file.jpg',title:'Title 6', sub_title:'This sub title!', link:"/id" },
-        {image:'/assets/img/system/file.jpg',title:'Title 5', sub_title:'This sub title!', link:"/id" },
-        {image:'/assets/img/system/file.jpg',title:'Title 4', sub_title:'This sub title!', link:"/id" },
-        {image:'/assets/img/system/file.jpg',title:'Title 3', sub_title:'This sub title!', link:"/id" },
-        {image:'/assets/img/system/file.jpg',title:'Title 2', sub_title:'This sub title!', link:"/id" },
-        {image:'/assets/img/system/file.jpg',title:'Title 1', sub_title:'This sub title!', link:"/id" },
+        {image:'/assets/img/system/file.jpg',title:'Madagascar plant', sub_title:'This sub title!', link:"/plants/1" },
+        {image:'/assets/img/system/download.jpeg',title:'Cyanotis somaliensis Plant', sub_title:'This sub title!', link:"/plants/2" },
+        {image:'/assets/img/system/file.jpg',title:'Ivy Plant', sub_title:'This sub title!', link:"/plants/3" },
+        {image:'/assets/img/system/file.jpg',title:'Coffee plant', sub_title:'This sub title!', link:"/plants/4" },
+        {image:'/assets/img/system/file.jpg',title:'Title 2', sub_title:'This sub title!', link:"/plants/5" },
+        {image:'/assets/img/system/file.jpg',title:'Title 1', sub_title:'This sub title!', link:"/plants/6" },
       ]
     }
   },
